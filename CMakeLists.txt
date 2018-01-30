@@ -3,4 +3,4 @@ project(KMA_OOP_01Lab)
 
 set(CMAKE_CXX_STANDARD 98)
 
-add_executable(KMA_OOP_01Lab main.cpp src/Point.cpp src/Point.h)
+add_executable(KMA_OOP_01Lab src/main.cpp src/Point.cpp src/Point.h)
