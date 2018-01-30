@@ -42,6 +42,7 @@ public:
 	inline Point& operator=(const Point &that) {
 		this->_x = that._x;
 		this->_y = that._y;
+		return *this;
 	}
 
 	inline double& x() {
@@ -69,10 +70,10 @@ public:
 	}
 
 private:
-	static unsigned int freeID;
-	const unsigned int pointID;
 	double _x;
 	double _y;
+	static unsigned int freeID;
+	const unsigned int pointID;
 };
 
 std::ostream& operator<<(std::ostream &ostr, const Point &point);
