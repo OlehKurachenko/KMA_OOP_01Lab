@@ -12,7 +12,7 @@ public:
 	explicit inline Point(double x = 0, double y = 0):
 		_x(x),
 		_y(y),
-		pointID(freeID++)
+		pointID(++freeID)
 	{
 #ifndef NDEBUG
 		std::cout << "constructor Point(" << x << ", " << y << ") call, point ID"
@@ -23,7 +23,7 @@ public:
 	inline Point(const Point &that):
 		_x(that._x),
 		_y(that._y),
-		pointID(freeID++)
+		pointID(++freeID)
 	{
 #ifndef NDEBUG
 		std::ostream& operator<<(std::ostream &, const Point&);
