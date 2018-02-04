@@ -68,11 +68,11 @@ public:
 		return sqrt(pow(this->x() - that.x(), 2) + pow(this->y() - that.y(), 2));
 	}
 
-	const int getID() const {
+	inline const int getID() const {
 		return this->pointID;
 	}
 
-	static const int amount() {
+	inline static const int amount() {
 		return freeID;
 	}
 
