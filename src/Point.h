@@ -64,7 +64,7 @@ public:
 		return this->_y;
 	}
 
-	inline double distanceTo(const Point &that) {
+	inline double distanceTo(const Point &that) const {
 		return sqrt(pow(this->x() - that.x(), 2) + pow(this->y() - that.y(), 2));
 	}
 
