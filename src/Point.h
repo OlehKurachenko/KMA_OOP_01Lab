@@ -7,6 +7,10 @@
 
 #include <iostream>
 
+class Point;
+
+std::ostream& operator<<(std::ostream &, const Point&);
+
 class Point {
 public:
 	explicit inline Point(double x = 0, double y = 0):
@@ -26,7 +30,6 @@ public:
 		pointID(++freeID)
 	{
 #ifndef NDEBUG
-		std::ostream& operator<<(std::ostream &, const Point&);
 		std::cout << "constructor Point(" << that << ") call, point ID"
 				  << pointID << " created" << std::endl;
 #endif
@@ -34,7 +37,6 @@ public:
 
 	inline ~Point() {
 #ifndef NDEBUG
-		std::ostream& operator<<(std::ostream &, const Point&);
 		std::cout << "destructor " << *this << " call" << std::endl;
 #endif
 	}
@@ -75,8 +77,6 @@ private:
 	static unsigned int freeID;
 	const unsigned int pointID;
 };
-
-std::ostream& operator<<(std::ostream &ostr, const Point &point);
 
 Point& operator+=(Point&, const Point&);
 
