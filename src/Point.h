@@ -6,6 +6,7 @@
 #define KMA_OOP_01LAB_POINT_H
 
 #include <iostream>
+#include <cmath>
 
 class Point;
 
@@ -61,6 +62,10 @@ public:
 
 	inline const double& y() const {
 		return this->_y;
+	}
+
+	inline double distanceTo(const Point &that) {
+		return sqrt(pow(this->x() - that.x(), 2) + pow(this->y() - that.y(), 2));
 	}
 
 	const int getID() const {
