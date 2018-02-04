@@ -7,7 +7,7 @@
 unsigned int Point::freeID = 0;
 
 std::ostream& operator<<(std::ostream &ostr, const Point &point) {
-	ostr << "Point{x=" << point.x() << ",y=" << point.y() << '}';
+	ostr << "Point{x=" << point.x() << ",y=" << point.y() << ",ID=" << point.getID() << '}';
 	return ostr;
 }
 
