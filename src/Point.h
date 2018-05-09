@@ -113,8 +113,8 @@ inline Point operator+(const Point &u, const Point &v) {
 }
 
 inline Point& operator-=(Point &one, const Point &another) {
-    one.x() += another.x();
-    one.y() += another.y();
+    one.x() -= another.x();
+    one.y() -= another.y();
     return one;
 }
 
